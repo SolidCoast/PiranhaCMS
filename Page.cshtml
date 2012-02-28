@@ -1,0 +1,12 @@
+﻿@inherits Piranha.WebPages.SinglePage
+@{  
+    Layout = "~/Content/_Layout.cshtml";
+    Page.Title = @Model.Page.Title;
+
+}
+<div class="row">
+    <div class="span16">
+        <h1>@Model.Page.Title</h1>
+        @Model.Regions.Content
+    </div>
+</div>

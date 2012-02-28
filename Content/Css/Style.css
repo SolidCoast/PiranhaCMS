@@ -1,0 +1,22 @@
+﻿@import url('bootstrap.min.css');
+@import url('bootstrap-responsive.min.css');
+
+body {
+    padding-top: 60px;
+    }
+.box {
+    background: #f5f5f5;
+    padding: 20px 20px 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    }
+@media (min-width: 768px) and (max-width: 980px) {
+    body {
+        padding-top: 0;
+        }
+    }
+@media (max-width: 768px) {
+    body {
+        padding-top: 0;
+        }
+    }

@@ -6,7 +6,7 @@ under development for the initial version the functionality is still somewhat
 limited.
 
 To get started, download the latest snapshop of the repository as a zip-file and
-unpack it on your harddrive. The create an IIS-application with .NET 4.0 pointing
+unpack it on your harddrive. Then create an IIS-application with .NET 4.0 pointing
 to your new Piranha folder. To install the database go to the following URL and
 enter the needed information.
 

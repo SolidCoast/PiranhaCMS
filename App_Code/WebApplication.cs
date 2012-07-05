@@ -15,5 +15,6 @@ public static class WebApplication
 	/// </summary>
 	public static void AppInitialize() {
 		WebPiranha.Init() ;
+		WebPiranha.InitServices() ;
 	}
 }

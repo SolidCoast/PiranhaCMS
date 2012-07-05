@@ -2,44 +2,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@Page.Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
         @UI.Head()
 
-        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="@Href("~/content/css/style.css")" />
 
-        <!-- Le styles -->
-        <link href="@Href("~/Content/Css/Style.css")" rel="stylesheet">
-        <style type="text/css">
-            body {
-                _padding-top: 60px;
-                }
-        </style>
-        @RenderSection("Head", false)
+        @RenderSection("head", required: false)
     </head>
     <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    @UI.Menu(StopLevel: 1, CssClass: "nav")
-                </div>
+        <header role="banner">
+            <div class="wrapper">
+                <a class="site-title" href="@Href("~/")">@Piranha.Models.SysParam.GetByName("SITE_TITLE").Value</a>
+                <p class="site-desc">@Piranha.Models.SysParam.GetByName("SITE_DESCRIPTION").Value</p>
+                <navigation role="main-navigation">
+                    @UI.Menu(StopLevel: 1)
+                </navigation>
             </div>
-        </div>
-
-        <div class="container">
+        </header>
+        <div class="wrapper">
             @RenderBody()
-            <footer>
-                <p>&copy; Piranha @DateTime.Now.Year |
-                Contact us at <a href="mailto:info@piranhacms.org">info@piranhacms.org</a> |
-                <a href="https://github.com">GitHub</a> |
-                <a href="http://www.bybrick.se">byBrick</a></p>
-            </footer>
         </div>
     </body>
+    @RenderSection("script", required: false)
 </html>

@@ -4,9 +4,13 @@
     Page.Title = @Model.Post.Title;
 
 }
-<div class="row">
-    <div class="span16">
+<div class="content">
+    <div class="main">
         <h1>@Model.Post.Title</h1>
+        <p class="ingress">@Model.Post.Excerpt</p>
         @Model.Post.Body
+    </div>
+    <div class="sidebar">
+        @RenderPage("~/Shared/Sidebar.cshtml")
     </div>
 </div>

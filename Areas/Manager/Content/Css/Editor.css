@@ -1,1 +1,5 @@
 ﻿@import url('http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css');
+
+html {
+    margin: 14px !important;
+    }

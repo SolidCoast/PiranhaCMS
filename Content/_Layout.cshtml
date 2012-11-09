@@ -17,9 +17,9 @@
             <div class="wrapper">
                 <a class="site-title" href="@Href("~/")">@Piranha.Models.SysParam.GetByName("SITE_TITLE").Value</a>
                 <p class="site-desc">@Piranha.Models.SysParam.GetByName("SITE_DESCRIPTION").Value</p>
-                <navigation role="main-navigation">
+                <nav role="main">
                     @UI.Menu(StopLevel: 1)
-                </navigation>
+                </nav>
             </div>
         </header>
         <div class="wrapper">

@@ -1,11 +1,7 @@
 ﻿@inherits Piranha.WebPages.BasePage
 @{
     Layout = "";
-    
-    List<Piranha.Entities.Post> posts = null ;
-    using (var db = new Piranha.DataContext()) {
-        posts = db.Posts.OrderByDescending(p => p.Published).ToList() ;
-    }
+    var posts = Piranha.Models.Post.GetByDraft();
 }
 <h2>Archive</h2>
 @if (posts.Count > 0) {

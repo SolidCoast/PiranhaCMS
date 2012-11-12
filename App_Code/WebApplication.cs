@@ -9,7 +9,7 @@ public static class WebApplication
 	/// Initializes the webb app.
 	/// </summary>
 	public static void AppInitialize() {
-		WebPiranha.Init() ;
+	    WebPiranha.Init() ;
 		WebPiranha.InitServices() ;
 	}
 }
